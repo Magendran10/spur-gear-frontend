@@ -11,7 +11,7 @@ export default function Dashboard() {
   
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/gears")
+    fetch("https://spur-gear-backend.onrender.com/api/gears")
       .then((res) => res.json())
       .then((gears) => {
         if (Array.isArray(gears)) {

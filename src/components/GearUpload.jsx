@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const FASTAPI_URL = "http://localhost:8000/upload-csv"; // your FastAPI endpoint
+const FASTAPI_URL = "https://spur-gear-backend.onrender.com/upload-csv"; // your FastAPI endpoint
 
 export default function CsvUploader() {
   const [file, setFile] = useState(null);
