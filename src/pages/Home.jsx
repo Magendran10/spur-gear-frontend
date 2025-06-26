@@ -5,7 +5,7 @@ const Home = () => {
   const [gear, setGear] = useState(null);
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/api/latest-gears")
+    axios.get("https://spur-gear-backend.onrender.com/api/latest-gears")
       .then((res) => {
         setGear(res.data[0]); // Take the most recent gear
       })
@@ -32,7 +32,7 @@ const Home = () => {
 
         <div className="flex justify-center mb-6">
           <img
-            src={`http://127.0.0.1:8000/images/${gear["Image Name"]}`}
+            src={`https://spur-gear-backend.onrender.com/images/${gear["Image Name"]}`}
             alt="Gear"
             className="w-44 h-44 object-contain rounded-xl border-4 border-white shadow-md bg-white"
           />

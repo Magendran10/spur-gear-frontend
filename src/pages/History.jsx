@@ -25,7 +25,7 @@ const HistoryPage = () => {
     setError("");
 
     try {
-      const res = await axios.get("http://127.0.0.1:8000/api/gears");
+      const res = await axios.get("https://spur-gear-backend.onrender.com/api/gears");
       const allData = res.data || [];
 
       const start = new Date(startDate + "T00:00:00");
@@ -159,7 +159,7 @@ const HistoryPage = () => {
                         >
                           <td className="p-3 border">
                             <img
-                              src={`http://127.0.0.1:8000/images/${gear["Image Name"]}`}
+                              src={`https://spur-gear-backend.onrender.com/images/${gear["Image Name"]}`}
                               alt="Gear"
                               className="w-16 h-16 object-contain rounded shadow"
                             />
