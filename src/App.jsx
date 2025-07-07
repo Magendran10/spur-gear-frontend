@@ -33,9 +33,9 @@ function App() {
             <Route path="/history" element={<History />} />
             <Route path="/analysis" element={<GearAnalysis />} />
             <Route path="/logs" element={<DefectLogs />} />
+            <Route path="/upload-csv" element={<JsonUploader />} />
             <Route path="/settings" element={<Settings />} />
           </Routes>
-        <JsonUploader />
       </Router>
     </div>
   );
