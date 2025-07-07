@@ -15,7 +15,7 @@ export default function GearAnalysis() {
   const [endDate, setEndDate] = useState("");
 
   useEffect(() => {
-    axios.get("http://localhost:8000/gears").then((res) => {
+    axios.get("https://spur-gear-backend.onrender.com/api/gears").then((res) => {
       setGearData(res.data);
       setFilteredData(res.data);
     });

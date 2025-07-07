@@ -2,6 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind components/ui/card;
 
 /* index.css */
 body, html {
