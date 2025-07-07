@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import GearBarChart from "../components/GearBarChart";
-import GearUpload from "../components/GearUpload";
+
 import GearDefectiveRateLineChart from "../components/GearDefectiveRateLineChart";
 import GearPieChart from "../components/GearPieChart";
 
