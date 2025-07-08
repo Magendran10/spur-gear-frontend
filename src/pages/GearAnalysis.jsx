@@ -29,7 +29,7 @@ export default function GearAnalysis() {
     }
     if (moduleFilter) {
       filtered = filtered.filter((item) => {
-        const moduleValue = item["Module"] || "";
+        const moduleValue = item["module"] || "";
         return moduleValue.toLowerCase().includes(moduleFilter.toLowerCase());
       });
     }
@@ -66,7 +66,7 @@ export default function GearAnalysis() {
 
   const moduleData = Object.values(
     filteredData.reduce((acc, g) => {
-      const moduleType = g["Module"] || "Unknown";
+      const moduleType = g["module"] || "Unknown";
       if (!acc[moduleType]) {
         acc[moduleType] = { module: moduleType, PASS: 0, FAIL: 0 };
       }

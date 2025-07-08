@@ -38,7 +38,7 @@ export default function Sidebar({ isOpen, onClose }) {
       <nav className="p-4 space-y-4">
         <Link to="/dashboard" className="block text-gray-700 hover:text-blue-500">Dashboard</Link>
         <Link to="/analysis" className="block text-gray-700 hover:text-blue-500">Gear Analysis</Link>
-        <Link to="/logs" className="block text-gray-700 hover:text-blue-500">Defect Logs</Link>
+        {/* <Link to="/logs" className="block text-gray-700 hover:text-blue-500">Defect Logs</Link>  */}
         <Link to="/upload-csv" className="block text-gray-700 hover:text-blue-500">Upload-Data</Link>
         <Link to="/settings" className="block text-gray-700 hover:text-blue-500">Settings</Link>
       </nav>

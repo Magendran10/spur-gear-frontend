@@ -23,7 +23,7 @@ export default function Layout() {
             ☰
           </button>
         
-          <div className="text-gray-600">Welcome, Magendran</div>
+          <div className="text-gray-600">Welcome,Admin</div>
         </header>
 
        
