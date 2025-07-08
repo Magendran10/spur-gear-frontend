@@ -2,7 +2,15 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Card, CardContent } from "../components/card.jsx";
 import {
-  LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, BarChart, Bar, Legend,
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  ResponsiveContainer,
+  BarChart,
+  Bar,
+  Legend,
 } from "recharts";
 import dayjs from "dayjs";
 
@@ -28,7 +36,7 @@ export default function GearAnalysis() {
       filtered = filtered.filter((item) => item.batch_id === batchId);
     }
     if (moduleFilter) {
-      filtered = filtered.filter((item) => item["module"] === moduleFilter);
+      filtered = filtered.filter((item) => String(item.module) === moduleFilter);
     }
     if (startDate && endDate) {
       filtered = filtered.filter((item) => {
@@ -41,11 +49,13 @@ export default function GearAnalysis() {
   }, [batchId, moduleFilter, startDate, endDate, gearData]);
 
   const averageDiameter = (
-    filteredData.reduce((sum, g) => sum + (g["Diameter (mm)"] || 0), 0) / (filteredData.length || 1)
+    filteredData.reduce((sum, g) => sum + (g["Diameter (mm)"] || 0), 0) /
+    (filteredData.length || 1)
   ).toFixed(2);
 
   const averageThickness = (
-    filteredData.reduce((sum, g) => sum + (g["Corrected Thickness (mm)"] || 0), 0) / (filteredData.length || 1)
+    filteredData.reduce((sum, g) => sum + (g["Corrected Thickness (mm)"] || 0), 0) /
+    (filteredData.length || 1)
   ).toFixed(3);
 
   const defectRate = (
@@ -63,7 +73,7 @@ export default function GearAnalysis() {
 
   const moduleData = Object.values(
     filteredData.reduce((acc, g) => {
-      const moduleType = g["module"] || "Unknown";
+      const moduleType = String(g["module"]) || "Unknown";
       if (!acc[moduleType]) {
         acc[moduleType] = { module: moduleType, PASS: 0, FAIL: 0 };
       }
@@ -72,7 +82,9 @@ export default function GearAnalysis() {
     }, {})
   );
 
-  const uniqueModules = [...new Set(gearData.map((g) => g["module"]).filter(Boolean))];
+  const uniqueModules = [
+    ...new Set(gearData.map((g) => String(g["module"])).filter(Boolean)),
+  ];
 
   return (
     <div className="p-4 md:p-6 min-h-screen bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors">
@@ -139,7 +151,9 @@ export default function GearAnalysis() {
 
       {/* Line Chart */}
       <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md mb-6">
-        <h3 className="text-xl font-semibold mb-4 text-gray-700 dark:text-yellow-300">📅 Pass vs Fail Over Time</h3>
+        <h3 className="text-xl font-semibold mb-4 text-gray-700 dark:text-yellow-300">
+          📅 Pass vs Fail Over Time
+        </h3>
         <ResponsiveContainer width="100%" height={300}>
           <LineChart data={trendData}>
             <XAxis dataKey="date" stroke="#9ca3af" />
@@ -154,7 +168,9 @@ export default function GearAnalysis() {
 
       {/* Bar Chart */}
       <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md">
-        <h3 className="text-xl font-semibold mb-4 text-gray-700 dark:text-yellow-300">⚙️ Pass vs Fail by Module</h3>
+        <h3 className="text-xl font-semibold mb-4 text-gray-700 dark:text-yellow-300">
+          ⚙️ Pass vs Fail by Module
+        </h3>
         <ResponsiveContainer width="100%" height={300}>
           <BarChart data={moduleData}>
             <XAxis dataKey="module" stroke="#9ca3af" />
