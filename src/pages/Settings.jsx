@@ -1,8 +1,11 @@
-export default function GearAnalysis() {
+import { Switch } from "@/components/UI/Switch";
+import { Label } from "@/components/UI/Label";
+
+export default function SettingsDemo() {
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Gear Analysis</h1>
-      <p>This is the Gear Analysis page.</p>
+    <div className="flex items-center gap-4 p-6">
+      <Label htmlFor="dark-mode">Dark Mode</Label>
+      <Switch id="dark-mode" />
     </div>
   );
 }
