@@ -278,6 +278,7 @@ avis/
 <div align="center">
 
 ### 🏠 Main Dashboard
+<<<<<<< HEAD
 ![Dashboard](screenshots/dashboard.png)
 
 ### 📊 Analytics View
@@ -287,13 +288,19 @@ avis/
 ![Inspection](screenshots/inspection.png)
 <!-- 
 ### 🏠 Main Dashboard
+=======
+>>>>>>> 97098b8208e7290456a991424bfa8b3291584551
 ![Dashboard](https://via.placeholder.com/800x450/4F46E5/FFFFFF?text=Main+Dashboard)
 
 ### 📊 Analytics View
 ![Analytics](https://via.placeholder.com/800x450/059669/FFFFFF?text=Analytics+Dashboard)
 
 ### 🔍 Inspection Details
+<<<<<<< HEAD
 ![Inspection](https://via.placeholder.com/800x450/DC2626/FFFFFF?text=Inspection+Details) -->
+=======
+![Inspection](https://via.placeholder.com/800x450/DC2626/FFFFFF?text=Inspection+Details)
+>>>>>>> 97098b8208e7290456a991424bfa8b3291584551
 
 </div>
 
