@@ -13,7 +13,7 @@
 [![Vite](https://img.shields.io/badge/Vite-5.2.0+-646CFF?logo=vite&logoColor=white)](https://vitejs.dev/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.3-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 
-[🚀 Live Demo](https://your-demo-url.com) • [📖 Documentation](https://your-docs-url.com) • [🐛 Report Bug](https://github.com/yourusername/avis/issues) • [✨ Request Feature](https://github.com/yourusername/avis/issues)
+[🚀 Live Demo](https://spur-gear-frontend.onrender.com/analysis) • [📖 Documentation](README.md) • [🐛 Report Bug](https://github.com/Magendran10/spur-gear-frontend/issues) • [✨ Request Feature](https://github.com/Magendran10/spur-gear-frontend/issues)
 
 </div>
 
